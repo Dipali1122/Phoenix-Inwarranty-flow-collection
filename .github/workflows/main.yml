@@ -1,6 +1,6 @@
 name : Postman Collection Workflow
 
-On:
+on:
   push:
     branches: [main]
   workflow_dispatch:
@@ -8,7 +8,7 @@ On:
     - cron: 30 02 * * *  
     - cron: 00 14 * * 1-5
 
-Jobs:
+jobs:
   run-tests:
     runs-on: ubuntu-latest
 
@@ -18,7 +18,7 @@ Jobs:
         
       - name: Install nodejs
         uses: actions/setup-node@v6.3.0
-        With:
+        with:
           node-verison: '22'
 
       - name : Install Newman
