@@ -31,7 +31,8 @@ jobs:
           newman run 'Inwaranty flow collection withtestdata.postman_collection.json' \
           -e QA.postman_environment.json \
           -d testdata.csv \
-          -r cli,htmlextra
+          -r cli,htmlextra \
+          --reporter-htmlextra-export ./newman/index.html
 
       - name : Newman report
         if: always()
