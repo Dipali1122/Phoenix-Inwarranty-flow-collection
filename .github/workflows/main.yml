@@ -5,8 +5,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: 30 02 * * *  
-    - cron: 00 14 * * 1-5
+    - cron: #30 02 * * *  
+    - cron: #00 14 * * 1-5
 
 jobs:
   run-tests:
